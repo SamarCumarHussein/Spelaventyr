@@ -5,12 +5,12 @@ namespace Tågäventyret.Monster;
 public class Monster
 {
     // Full properties används
-    // get och protected set för Namn, HP, Damage,XpReward,GoldReward
-    public string Name { get; protected set; }
-    public int Health { get; protected set; }
-    public int Damage { get; protected set; }
-    public int XpReward { get; protected set; }
-    public int GoldReward { get; protected set; }
+    // get och protected set för Namn, Health, Damage,XpReward,GoldReward
+    public string Name { get; private set; }
+    public int Health { get; private set; }
+    public int Damage { get; private set; }
+    public int XpReward { get; private set; }
+    public int GoldReward { get; private set; }
 
     // Konatruktor
 
@@ -37,8 +37,6 @@ public class Monster
 
 
 
-// Tar skada från spelaren
-// Minskar Zombies HP och returnera true om monstret dör
 
 
 
@@ -50,23 +48,10 @@ public class Monster
 
 
 
-// Zombie attackerar spelaren
 
 
-// Tre subklasser som ärver från monster
-// Walker
-// Runner 
-// Mutant 
-// 1. Carriage 1: Weakest Zombie- Walker
 
-public class Walker: Monster
-{
-    public Walker()
-         : base("Infected Passenger", health: 30, damage: 8, xpReward: 20, goldReward: 10)
-    {
-    }
-}
-// 2. Carriage 2: Medium Zombie - Runner
+
 
 public class ZombieRunner: Monster
 {
@@ -75,7 +60,6 @@ public class ZombieRunner: Monster
     {
     }
 }
-// 3. Final Carriage: Big Boss
 
 public class Mutant: Monster
 {
