@@ -1,8 +1,8 @@
-namespace Tågäventyret;
+namespace Tågäventyret.Monster;
  // Zombie/monster är basklassen för alla fiender 
  // Genmensam logik placeras här så att basklassen kan anropa samma funktioner
 
-public class Zombie
+public class Monster
 {
     // Full properties används
     // get och protected set för Namn, HP, Damage,XpReward,GoldReward
@@ -14,7 +14,7 @@ public class Zombie
 
     // Konatruktor
 
-    public Zombie(string name, int health, int damage, int xpReward, int goldReward)
+    public Monster(string name, int health, int damage, int xpReward, int goldReward)
     {
         Name = name;
         Health = health;
@@ -59,7 +59,7 @@ public class Zombie
 // Mutant 
 // 1. Carriage 1: Weakest Zombie- Walker
 
-public class Walker: Zombie
+public class Walker: Monster
 {
     public Walker()
          : base("Infected Passenger", health: 30, damage: 8, xpReward: 20, goldReward: 10)
@@ -68,16 +68,16 @@ public class Walker: Zombie
 }
 // 2. Carriage 2: Medium Zombie - Runner
 
-public class Runner: Zombie
+public class ZombieRunner: Monster
 {
-    public Runner()
+    public ZombieRunner()
        : base("Mutated Guard", health: 60, damage: 15, xpReward: 50, goldReward: 30)
     {
     }
 }
 // 3. Final Carriage: Big Boss
 
-public class Mutant: Zombie
+public class Mutant: Monster
 {
     public bool HasTrainKey { get; private set; } = true;
 
