@@ -3,7 +3,7 @@ using Tågäventyret.Monster;
 
 namespace Tågäventyret;
 
-public class Striden
+public class Battle
 {
 
     public void StartBattle(Player player, Monster monster)
