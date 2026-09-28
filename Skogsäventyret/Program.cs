@@ -1,6 +1,8 @@
 ﻿using System;
 using Tågäventyret.Monster;
 
+
+
 namespace Tågäventyret;
 
 public class Battle
