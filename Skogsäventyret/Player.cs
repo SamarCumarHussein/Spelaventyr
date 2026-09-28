@@ -16,6 +16,7 @@ public class Player
     // Använder full properties då tidigare uppgift krävde så antar att det blir lättare att använda samma strukture
 
     // Skapa get och private set för Namn
+
     public string Namn
     {
         get { return _name; }
