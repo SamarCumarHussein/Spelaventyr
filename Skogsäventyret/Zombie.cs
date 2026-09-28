@@ -5,12 +5,12 @@ namespace Tågäventyret;
 public class Zombie
 {
     // Full properties används
-    // get och protected set för Namn, HP, Damage,XpReward,GoldReward
-    public string Name { get; protected set; }
-    public int Health { get; protected set; }
-    public int Damage { get; protected set; }
-    public int XpReward { get; protected set; }
-    public int GoldReward { get; protected set; }
+    // get och protected set för Namn, Health, Damage,XpReward,GoldReward
+    public string Name { get; private set; }
+    public int Health { get; private set; }
+    public int Damage { get; private set; }
+    public int XpReward { get; private set; }
+    public int GoldReward { get; private set; }
 
     // Konatruktor
 
