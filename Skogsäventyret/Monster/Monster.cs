@@ -53,20 +53,4 @@ public class Monster
 
 
 
-public class ZombieRunner: Monster
-{
-    public ZombieRunner()
-       : base("Mutated Guard", health: 60, damage: 15, xpReward: 50, goldReward: 30)
-    {
-    }
-}
 
-public class Mutant: Monster
-{
-    public bool HasTrainKey { get; private set; } = true;
-
-    public Mutant()
-        : base("Zombie Captain", health: 120, damage: 25, xpReward: 100, goldReward: 100)
-    {
-    }
-}
