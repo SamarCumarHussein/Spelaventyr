@@ -1,4 +1,7 @@
 namespace Tågäventyret.Monster;
+
+    
+
  // Zombie/monster är basklassen för alla fiender 
  // Genmensam logik placeras här så att basklassen kan anropa samma funktioner
 

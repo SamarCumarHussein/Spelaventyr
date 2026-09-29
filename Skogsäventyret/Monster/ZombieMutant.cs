@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Text;
 // 3. Final Carriage: Big Boss
 
-namespace Tågäventyret.Monster
-{
+namespace Tågäventyret.Monster;
+
     public class Mutant : Monster
     {
         public bool HasTrainKey { get; private set; } = true;
@@ -14,4 +14,4 @@ namespace Tågäventyret.Monster
         {
         }
     }
-}
+

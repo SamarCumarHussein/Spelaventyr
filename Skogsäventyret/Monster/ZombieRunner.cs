@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Text;
 // 2. Carriage 2: Medium Zombie - Runner
 
-namespace Tågäventyret.Monster
-{
+namespace Tågäventyret.Monster;
+
     public class Runner : Monster
     {
         public Runner()
@@ -12,4 +12,4 @@ namespace Tågäventyret.Monster
         {
         }
     }
-}
+

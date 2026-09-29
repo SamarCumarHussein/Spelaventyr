@@ -3,8 +3,6 @@ using Tågäventyret.Monster;
 using MonsterClass = Tågäventyret.Monster.Monster;
 
 
-
-
 namespace Tågäventyret;
 
 public class Battle
