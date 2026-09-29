@@ -2,99 +2,39 @@ namespace Tågäventyret;
 
 public class Player
 {
-    // Private fält
-    private string _name;
-    private int _hp;
-    private int _maxHp;
-    private int _attack;
-    private int _forsvar;
-    private int _level;
-    private int _xp;
-    private int _dagar;
-  
-    // Properties
-    // Använder full properties då tidigare uppgift krävde så antar att det blir lättare att använda samma strukture
+    public string Namn { get; private set; }
+    public int Hp { get; private set; }
+    public int MaxHp { get; private set; }
+    public int Attack { get; private set; }
+    public int Forsvar { get; private set; }
+    public int Level { get; private set; }
+    public int Xp { get; private set; }
+    public int Dagar { get; private set; }
 
-    // Skapa get och private set för Namn
 
-    public string Namn
-    {
-        get { return _name; }
-        private set { _name = value; }
-    }
-
-    // Skapa get och private set för HP
-    public int Hp
-    {
-        get { return _hp; }
-        private set { _hp = value; }
-    }
-
-    // Skapa get och private set för MaxHP
-    public int MaxHp
-    {
-        get { return _maxHp; }
-        private set { _maxHp = value; }
-    }
-
-    // Skapa get och private set för Attack
-    public int Attack
-    {
-        get { return _attack; }
-        private set { _attack = value; }
-    }
-
-    // Skapa get och private för Forsvar
-    public int Forsvar
-    {
-        get { return _forsvar; }
-        private set { _forsvar = value; }
-    }
-
-    //Skapa get och private set för Level
-    public int Level
-    {
-        get { return _level; }
-        private set { _level = value; }
-    }
-
-    // Skapa get och private set för XP
-    public int XP
-    {
-        get { return _xp; }
-        private set { _xp = value; }
-    }
-
-    // Skapa get och private set för Dagar
-    public int Dagar
-    {
-        get { return _dagar; }
-        private set { _dagar = value; }
-    }
-
-  
     // Konstruktor 
-    public Player(string name, int hp, int attack, int forsvar, int level, int xp, int dagar)
+    public Player(string namn)
     {
         // Tilldela startvärden till spelarens private fält
-        _name = name;
-        _maxHp = 30;
-        _attack = 8;
-        _forsvar = 3;
-        _level = 3;
-       _xp = 0;
-        _dagar = 0;
-        ;
+         Namn = namn;
+         MaxHp = 30;
+         Hp = MaxHp;
+         Attack = 8;
+         Forsvar = 3;
+         Level = 3;
+         Xp = 0;
+         Dagar = 0;
+        
     }
      // Minskar spelarens HP och returnera true om spelaren dör
     public bool TakeDamage(int skada)
     {
-        _hp -= skada;
+        Hp -= skada;
 
-        if (_hp <= 0)
+        if (Hp <= 0)
         {
             // om HP är 0 eller mindre så dörr spelaren
-            _hp = 0;
+            Hp = 0;
             return true;
         }
 
@@ -104,29 +44,34 @@ public class Player
     // Återställer HP till MaxHP (kostar en dag)
     public void Heal()
     {
-        _hp = _maxHp;
-        _dagar++;
+        Hp = MaxHp;
+        Dagar++;
     }
     // Ge spelaren XP 
     // När spelaaren når XP-tröskeln anropas LevelUp()
     public void GainXP(int mängd)
     {
-        _xp += mängd;
+       Xp += mängd;
 
-        if (_xp >= 20)
+        if (Xp >= 20)
         {
             LevelUp();
         }
     }
 
-    // Levla upp 
-    // Öka level, MaxHP och attck samt återställer Hp
+    // Höjer spelarens level, maxHP och attack.
+    // HP återställs när spelaren levlar upp.
     public void LevelUp()
     {
-        _level++;
-        _maxHp+= 10;
-        _attack += 2;
-        _hp = _maxHp;
+        Level++;
+        MaxHp+= 10;
+        Attack += 2;
+        Hp = MaxHp;
+    }
+    // Ökar antalet överlevda dagar med en dag.
+    public void ÖkaDag()
+    {
+        Dagar++;
     }
 }
 

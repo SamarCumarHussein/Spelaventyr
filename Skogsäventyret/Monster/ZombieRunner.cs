@@ -5,10 +5,10 @@ using System.Text;
 
 namespace Tågäventyret.Monster
 {
-    public class Runner : Monster
+    public class Runner : Zombie
     {
         public Runner()
-           : base("Mutated Guard", health: 60, damage: 15, xpReward: 50, goldReward: 30)
+           : base("Mutated Guard", hp: 60, attack: 15,forsvar: 2, xpBeloning: 50)
         {
         }
     }

@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-// 3. Final Carriage: Big Boss
 
-namespace Tågäventyret.Monster
+
+namespace Tågäventyret
 {
-    public class Mutant : Monster
+    public class Mutant : Zombie
     {
         public bool HasTrainKey { get; private set; } = true;
 
         public Mutant()
-            : base("Zombie Captain", health: 120, damage: 25, xpReward: 100, goldReward: 100)
+            : base("Zombie Captain", hp: 120, attack: 25,forsvar:8, xpBeloning: 100)
         {
         }
     }
