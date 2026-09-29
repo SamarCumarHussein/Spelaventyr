@@ -1,24 +1,19 @@
-using System;
-using Tågäventyret.Monster;
-using MonsterClass = Tågäventyret.Monster.Monster;
-
-
 namespace Tågäventyret;
 
 public class Battle
 {
 
-    public void StartBattle(Player player, MonsterClass monster)
+    public void StartBattle(Player player, Zombie zombie)
     {
-        Console.WriteLine($"You meet {monster.Name}!");
+        Console.WriteLine($"You meet {zombie.Name}!");
 
-        while (player.Hp > 0 && !monster.IsDead())
+        while (player.Hp > 0 && zombie.Hp > 0)
         {
             Console.WriteLine();
             Console.WriteLine($"Your hp: {player.Hp}");
-            Console.WriteLine($"{monster.Name} HP: {monster.Health}");
+            Console.WriteLine($"{zombie.Name} HP: {zombie.Hp}");
             
-            Console.WriteLine("\nWhat do you want to do?");
+            Console.WriteLine("What do you want to do?");
             Console.WriteLine("1. Defend");
             Console.WriteLine("2. Attack");
             Console.WriteLine("3. Run");
