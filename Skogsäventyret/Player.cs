@@ -21,7 +21,7 @@ public class Player
          Hp = MaxHp;
          Attack = 8;
          Forsvar = 3;
-         Level = 3;
+         Level = 1;
          Xp = 0;
          Dagar = 0;
         
@@ -56,6 +56,7 @@ public class Player
         if (Xp >= 20)
         {
             LevelUp();
+            Xp = 0;
         }
     }
 
