@@ -7,7 +7,7 @@ namespace Tågäventyret;
 
 public class Battle
 {
-
+    // Startar och fortsätter striden så länge både spelaren och zombien lever
     public void StartBattle(Player player, Zombie zombie)
     {
         Console.WriteLine($"You meet {zombie.Name}!");
@@ -24,7 +24,7 @@ public class Battle
             Console.WriteLine("3. Run");
             
             string choice = Console.ReadLine();
-
+            // Spelarens val avgör vilken handling som utförs under rundan
             if (choice == "1")
             {
                 Defend(player, zombie);
@@ -41,10 +41,11 @@ public class Battle
             {
                 Console.WriteLine("Invalid choice. Choose 1, 2 or 3.");
             }
+            // Visar resultatet efter varje runda så spelaren kan följa bådas HP
             Console.WriteLine($"Your HP: {player.Hp}");
             Console.WriteLine($"{zombie.Name} HP: {zombie.Hp}");
         }
-
+        // XP ges endast om spelaren lyckades besegra zombien
         if (zombie.Hp <= 0)
         {
             Console.WriteLine($"You defeated {zombie.Name}!");
@@ -58,6 +59,7 @@ public class Battle
 
     private void Defend(Player player, Zombie zombie)
     {
+        // Försvar halverar skadan från zombiens attack
         int damage = zombie.Attack / 2;
         player.TakeDamage(damage);
         
@@ -67,8 +69,10 @@ public class Battle
 
     private void Attack(Player player, Zombie zombie)
     {
+        // Zombiens försvar minskar spelarens attackskada
         int damage = player.Attack - zombie.Forsvar;
-
+        
+        // Minst 1 skada görs så att en attack alltid kan skada zombien
         if (damage < 1)
         {
             damage = 1;
@@ -83,6 +87,7 @@ public class Battle
     {
         Random random = new Random();
 
+        // Flykt ger slumpmässig skada upp till zombiens attackvärd
         int damage = random.Next(1, zombie.Attack + 1);
         player.TakeDamage(damage);
 
