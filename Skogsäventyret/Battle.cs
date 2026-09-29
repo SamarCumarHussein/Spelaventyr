@@ -1,5 +1,3 @@
-using System;
-
 namespace Tågäventyret;
 
 public class Battle
