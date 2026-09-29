@@ -12,8 +12,6 @@ public class Battle
         while (player.Hp > 0 && zombie.Hp > 0 )
         {
             Console.WriteLine();
-            Console.WriteLine($"Your hp: {player.Hp}");
-            Console.WriteLine($"{zombie.Name} HP: {zombie.Hp}");
             
             Console.WriteLine("\nWhat do you want to do?");
             Console.WriteLine("1. Defend");
@@ -38,9 +36,11 @@ public class Battle
             {
                 Console.WriteLine("Invalid choice. Choose 1, 2 or 3.");
             }
+            Console.WriteLine($"Your HP: {player.Hp}");
+            Console.WriteLine($"{zombie.Name} HP: {zombie.Hp}");
         }
 
-        if (zombie.Hp < 0)
+        if (zombie.Hp <= 0)
         {
             Console.WriteLine($"You defeated {zombie.Name}!");
             player.GainXP(zombie.XpBeloning);
@@ -62,7 +62,7 @@ public class Battle
 
     private void Attack(Player player, Zombie zombie)
     {
-        int damage = player.Attack;
+        int damage = player.Attack - zombie.Forsvar;
 
         if (damage < 1)
         {
