@@ -7,6 +7,23 @@ public class Battle
     {
         Console.WriteLine($"Du möter {zombie.Name}!");
 
+
+        while (player.Hp > 0 && !monster.IsDead())
+        {
+            Console.WriteLine();
+            Console.WriteLine($"Your hp: {player.Hp}");
+            Console.WriteLine($"{monster.Name} HP: {monster.Health}");
+            
+            Console.WriteLine("What do you want to do?");
+            Console.WriteLine("1. Defend");
+            Console.WriteLine("2. Attack");
+            Console.WriteLine("3. Run");
+            
+            string choice = Console.ReadLine();
+            // Spelarens val avgör vilken handling som utförs under rundan
+=======
+=======
+>>>>>>> fa0c4f5e7fdb8c0c6640f89da1768ac2446d8102
         while (player.Hp > 0 && zombie.Hp > 0)
         {
             Console.WriteLine();

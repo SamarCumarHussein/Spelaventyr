@@ -1,6 +1,4 @@
-﻿using Tågäventyret.Monster;
-
-namespace Tågäventyret;
+﻿namespace Tågäventyret;
 
 public class Program
 {
