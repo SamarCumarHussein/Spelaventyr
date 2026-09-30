@@ -8,7 +8,7 @@ namespace Tågäventyret
     public class Runner : Zombie
     {
         public Runner()
-           : base("Mutated Guard", hp: 60, attack: 13, forsvar: 2, xpBeloning: 60)
+           : base("Mutated Guard", hp: 60, attack: 5, forsvar: 2, xpBeloning: 60)
         {
         }
     }
