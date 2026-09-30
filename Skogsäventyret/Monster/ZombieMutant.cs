@@ -10,7 +10,7 @@ namespace Tågäventyret
         public bool HasTrainKey { get; private set; } = true;
 
         public Mutant()
-            : base("Zombie Captain", hp: 30, attack: 10,forsvar:8, xpBeloning: 50)
+            : base("Zombie Captain", hp: 30, attack: 2,forsvar:5, xpBeloning: 50)
         {
         }
     }
