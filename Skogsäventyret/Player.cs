@@ -17,7 +17,7 @@ public class Player
     {
         // Tilldela startvärden till spelarens private fält
          Namn = namn;
-         MaxHp = 30;
+         MaxHp = 60;
          Hp = MaxHp;
          Attack = 8;
          Forsvar = 3;

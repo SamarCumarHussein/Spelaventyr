@@ -7,11 +7,12 @@ namespace Tågäventyret;
 
 public class Battle
 {
-    // Startar och fortsätter striden så länge både spelaren och zombien lever
+    // Striden fortsätter tills spelaren eller monstret dör
     public void StartBattle(Player player, Zombie zombie)
     {
-        Console.WriteLine($"You meet {zombie.Name}!");
+        Console.WriteLine($"Du möter {zombie.Name}!");
 
+<<<<<<< HEAD
         while (player.Hp > 0 && !monster.IsDead())
         {
             Console.WriteLine();
@@ -25,80 +26,111 @@ public class Battle
             
             string choice = Console.ReadLine();
             // Spelarens val avgör vilken handling som utförs under rundan
+=======
+        while (player.Hp > 0 && zombie.Hp > 0)
+        {
+            Console.WriteLine();
+            Console.WriteLine("Vad vill du göra?");
+            Console.WriteLine("1. Försvara");
+            Console.WriteLine("2. Anfalla");
+            Console.WriteLine("3. Springa");
+
+            // Spelaren väljer vad den vill göra
+            string choice = Console.ReadLine() ?? "";
+
+>>>>>>> 8e07cb0ef57a8c92bcf7cf84366a2c540a7a7cf1
             if (choice == "1")
             {
-                Defend(player, zombie);
+                Försvara(player, zombie);
             }
             else if (choice == "2")
             {
-                Attack(player, zombie);
+                Anfalla(player, zombie);
             }
             else if (choice == "3")
             {
-                Run(player, zombie);
+                Springa(player, zombie);
             }
             else
             {
-                Console.WriteLine("Invalid choice. Choose 1, 2 or 3.");
+                Console.WriteLine("Fel val. Välj 1, 2 eller 3.");
+                continue;
             }
+
             // Visar resultatet efter varje runda så spelaren kan följa bådas HP
-            Console.WriteLine($"Your HP: {player.Hp}");
+            Console.WriteLine();
+            Console.WriteLine($"Ditt HP: {player.Hp}");
             Console.WriteLine($"{zombie.Name} HP: {zombie.Hp}");
         }
-        // XP ges endast om spelaren lyckades besegra zombien
+
+        // Spelaren får XP när monstret besegras
         if (zombie.Hp <= 0)
         {
-            Console.WriteLine($"You defeated {zombie.Name}!");
+            Console.WriteLine();
+            Console.WriteLine($"{zombie.Name} besegrades!");
             player.GainXP(zombie.XpBeloning);
         }
         else
         {
-            Console.WriteLine("You died!");
+            // Spelet avslutas om spelaren dör
+            Console.WriteLine();
+            Console.WriteLine("Du dog!");
         }
     }
 
-    private void Defend(Player player, Zombie zombie)
+    // Försvar halverar monstrets skada
+    private void Försvara(Player player, Zombie zombie)
     {
-        // Försvar halverar skadan från zombiens attack
-        int damage = zombie.Attack / 2;
-        player.TakeDamage(damage);
-        
-        Console.WriteLine($"You defend yourself and take {damage} damage.");
-        
+        int skada = zombie.Attack / 2;
+
+        player.TakeDamage(skada);
+
+        Console.WriteLine(
+            $"Du försvarar dig. {zombie.Name} gör {skada} skada."
+        );
     }
 
-    private void Attack(Player player, Zombie zombie)
+    // Spelarens attack minskas av monstrets försvar
+    private void Anfalla(Player player, Zombie zombie)
     {
-        // Zombiens försvar minskar spelarens attackskada
-        int damage = player.Attack - zombie.Forsvar;
-        
-        // Minst 1 skada görs så att en attack alltid kan skada zombien
-        if (damage < 1)
+        int skada = player.Attack - zombie.Forsvar;
+
+        // En attack gör alltid minst 1 skada
+        if (skada < 1)
         {
-            damage = 1;
-        }    
-        
-        zombie.TakeDamage(damage);
-        Console.WriteLine($"You attack and deal {damage} damage!");
-        
+            skada = 1;
+        }
+
+        zombie.TakeDamage(skada);
+
+        Console.WriteLine(
+            $"Du anfaller {zombie.Name} för {skada} skada."
+        );
+
+        // Monstret anfaller tillbaka om det fortfarande lever
+        if (zombie.Hp > 0)
+        {
+            int monsterskada = zombie.Attack;
+
+            player.TakeDamage(monsterskada);
+
+            Console.WriteLine(
+                $"{zombie.Name} anfaller dig för {monsterskada} skada."
+            );
+        }
     }
 
-    private void Run(Player player, Zombie zombie)
+    // Springa ger slumpmässig skada mellan 1 och monstrets attack
+    private void Springa(Player player, Zombie zombie)
     {
         Random random = new Random();
 
-        // Flykt ger slumpmässig skada upp till zombiens attackvärd
-        int damage = random.Next(1, zombie.Attack + 1);
-        player.TakeDamage(damage);
+        int skada = random.Next(1, zombie.Attack + 1);
 
-        Console.WriteLine($"You try to run and take {damage} damage!");
+        player.TakeDamage(skada);
 
+        Console.WriteLine(
+            $"Du springer iväg men {zombie.Name} gör {skada} skada."
+        );
     }
-
-
-
-
 }
-
-
-
