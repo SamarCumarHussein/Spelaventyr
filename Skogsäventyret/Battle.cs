@@ -2,7 +2,7 @@ namespace Tågäventyret;
 
 public class Battle
 {
-    // Striden fortsätter tills spelaren eller monstret dör
+    // Striden fortsätter tills spelaren eller monstret dör .
     public void StartBattle(Player player, Zombie zombie)
     {
         Console.WriteLine($"Du möter {zombie.Name}!");
