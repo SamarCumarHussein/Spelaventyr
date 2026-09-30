@@ -56,6 +56,7 @@ public class Player
         if (Xp >= 20)
         {
             LevelUp();
+  
         }
     }
 
