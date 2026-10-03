@@ -19,7 +19,7 @@ public class Player
          Namn = namn;
          MaxHp = 60;
          Hp = MaxHp;
-         Attack = 8;
+         Attack = 6;
          Forsvar = 3;
          Level = 1;
          Xp = 0;

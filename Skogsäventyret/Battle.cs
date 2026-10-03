@@ -26,10 +26,13 @@ public class Battle
             {
                 Anfalla(player, zombie);
             }
+
             else if (choice == "3")
             {
                 Springa(player, zombie);
+                return;
             }
+
             else
             {
                 Console.WriteLine("Fel val. Välj 1, 2 eller 3.");
@@ -111,5 +114,13 @@ public class Battle
         Console.WriteLine(
             $"Du springer iväg men {zombie.Name} gör {skada} skada."
         );
+
+        // Vänta så spelaren hinner se meddelandet
+        Console.WriteLine("Tryck på Enter för att fortsätta...");
+        Console.ReadLine();
+
+        // Avsluta striden och gå tillbaka till startsidan
+        return;
     }
 }
+

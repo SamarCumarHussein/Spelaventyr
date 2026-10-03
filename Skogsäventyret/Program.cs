@@ -53,14 +53,6 @@ public class Program
         Player player = new Player(namn);
         Battle battle = new Battle();
 
-        // Lista med olika monster
-        List<Zombie> zombies = new List<Zombie>
-        {
-            new Walker(),
-            new Runner(),
-            new Mutant()
-        };
-
         // Händelser sparas i en lista
         List<string> händelselogg = new List<string>();
 
@@ -73,6 +65,14 @@ public class Program
         // Spelet fortsätter tills spelaren dör
         while (player.Hp > 0)
         {
+            // Nya monster skapas varje dag
+            List<Zombie> zombies = new List<Zombie>
+            {
+                new Walker(),
+                new Runner(),
+                new Mutant()
+            };
+
             Console.Clear();
 
             Console.WriteLine("================================");
@@ -144,13 +144,10 @@ public class Program
             // Spelaren kan vila och återställa HP
             else if (choice == "2")
             {
-                // Vila är bara möjligt från nivå 4
+                // Vila är bara möjligt från nivå 3
                 if (player.Level >= 3)
                 {
-                    // Vila kostar en dag
-                    player.ÖkaDag();
-
-                    // HP återställs
+                    // Heal återställer HP och ökar dagen med 1
                     player.Heal();
 
                     händelselogg.Add(
