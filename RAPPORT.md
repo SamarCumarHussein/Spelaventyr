@@ -2,7 +2,7 @@
 
 **Kurs:** Grundläggande OOP i C#  
 
-**Projekt:** *(Skogsäventyret / Havsforskarna / Dungeon Crawler)*  
+**Projekt:** *Tågsäventyret*  
 
 **Grupp:** General Grievous 
 
