@@ -115,10 +115,6 @@ public class Battle
             $"Du springer iväg men {zombie.Name} gör {skada} skada."
         );
 
-        // Vänta så spelaren hinner se meddelandet
-        Console.WriteLine("Tryck på Enter för att fortsätta...");
-        Console.ReadLine();
-
         // Avsluta striden och gå tillbaka till startsidan
         return;
     }
