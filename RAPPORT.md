@@ -2,8 +2,8 @@
 
 **Kurs:** Grundläggande OOP i C#  
 **Projekt:** *(Skogsäventyret / Havsforskarna / Dungeon Crawler)*  
-**Grupp:**  
-**Datum:**  
+**Grupp:** General Grievous 
+**Datum:**  4-10-2026
 **GitHub:**  
 **Commit-hash vid inlämning:**  
 
@@ -16,7 +16,7 @@
 | Namn | Lämnar in rapport? |
 |------|--------------------|
 |      | ✅ Ja (den här personen — lämnar in Zip + RAPPORT.md + REFLEKTION.md) |
-|      | ❌ Nej (lämnar in endast REFLEKTION.md) |
+|Yuk Ting Ku      | ❌ Nej (lämnar in endast REFLEKTION.md) |
 |      | ❌ Nej (lämnar in endast REFLEKTION.md) |
 |      | ❌ Nej (lämnar in endast REFLEKTION.md) |
 
