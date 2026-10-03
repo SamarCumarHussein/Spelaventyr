@@ -1,10 +1,15 @@
 # Rapport — Slutprojekt
 
 **Kurs:** Grundläggande OOP i C#  
+
 **Projekt:** *(Skogsäventyret / Havsforskarna / Dungeon Crawler)*  
+
 **Grupp:** General Grievous 
+
 **Datum:**  4-10-2026
+
 **GitHub:**  https://github.com/SamarCumarHussein/Spelaventyr/tree/main
+
 **Commit-hash vid inlämning:**  
 
 ---
