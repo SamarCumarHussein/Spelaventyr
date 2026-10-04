@@ -18,9 +18,9 @@
 
 *Fyll i alla som medverkat i gruppen:*
 
-| Namn | Lämnar in rapport? |
-|------|--------------------|
-|Samar | ✅ Ja (den här personen — lämnar in Zip + RAPPORT.md + REFLEKTION.md) |
+| Namn         | Lämnar in rapport? |
+|------------- |--------------------|
+|Samar Hussein | ✅ Ja (den här personen — lämnar in Zip + RAPPORT.md + REFLEKTION.md) |
 |Yuk Ting Ku   | ❌ Nej (lämnar in endast REFLEKTION.md) |
 |Ali Kansour   | ❌ Nej (lämnar in endast REFLEKTION.md) |
 
@@ -42,19 +42,19 @@ Har ni inte fyllt i VG-delen → projektet bedöms som G.
 
 *Vilka klasser skapade ni och vad ansvarar var och en för? Hur använde ni privata fält, properties och konstruktorer?*
 
- > Vi skapade flera klasser för att bygga upp spelet. Player ansvarar för spelarens stats, Zombie är basklassen för de de olika monsterna.Walker, Runner och Mutant är olika typer av zombies/monster. Battle ansvarar för striderna mellan spelaren och monstren.
+ > Vi skapade flera klasser för att bygga upp spelet. Player ansvarar för spelarens stats, Zombie är basklassen för de de olika monsterna. Walker, Runner och Mutant är olika typer av zombies/monster. Battle ansvarar för striderna mellan spelaren och monstren. Vi använde properties med private set för att skydda värdena. Konstruktorerna används för att ge spelaren och monstren sina startvärden när de skapas.
 
 ### Arv och `List<T>`
 
 *Var använde ni `List<T>`, och vad innehåller den? Använde ni arv — i så fall hur ser hierarkin ut och varför?*
 
-> Vi anänder List<Zombie> för att samla de olika monsterna/zombien och sedan völja ett monster slumpmässigt. Walker, Runner och Mutant är subklasserna och ärver från Zombie, de har gemensamma egenskaper men olika stats. 
+> Vi använder List<Zombie> för att samla de olika monsterna/zombien och sedan välja ett monster slumpmässigt. Walker, Runner och Mutant är subklasserna och ärver från Zombie, de har gemensamma egenskaper men olika stats. 
 
 ### Spelloopen
 
 *Hur är spelets huvudloop uppbyggd? Hur hanterar ni användarens input och felaktig input?*
 
-> Spelets huvudloop forsätter så länge spelaren har HP-Kvar. Spelaren får välja vad de vi göra och if-satser används för att hantera valen. Om spelaren skriver ette felaktigt val få den föröska igen.
+> Spelets huvudloop forsätter så länge spelaren har HP-Kvar. Spelaren får välja vad de vi göra och if-satser används för att hantera valen. Om spelaren skriver ett felaktigt val få den föröska igen.
 
 ### UML
 
@@ -82,7 +82,7 @@ Nå slutstationen → Vinn
 ### Git
 
 *Hur jobbade ni med Git? Branches, pull requests, vem gjorde vad?*
-> Vi använde Git för att spara våra ändringar och hålla koll på alla versioner. Vi gjode commits och pushade sedan ändringan tull GitHub. 
+> Vi använde Git för att spara våra ändringar och hålla koll på alla versioner. Vi gjode commits och pushade sedan ändringan till GitHub. 
 
 Klistra in utskriften från `git log --oneline`:
 
@@ -119,7 +119,7 @@ eea0119 Merge branch 'main' of https://github.com/SamarCumarHussein/Skogs-ventyr
 
 *Nämn ett exempel på ett bra namn och en kommentar ni skrev som förklarar **varför**, inte *vad*.*
 
-> Ett exempel på ett bra namn är StartBattle(), eftersom namnet tydligt visar vad metoden gör. Vi använde även kommentarer för att förklara varför vad vissa delar gör eller ska göra.
+> Ett exempel på ett bra namn är StartBattle(), eftersom namnet tydligt visar vad metoden gör. Vi använde även kommentarer för att förklara varför vad en vissa delar gör eller ska göra.
 
 ---
 

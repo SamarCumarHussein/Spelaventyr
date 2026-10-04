@@ -24,7 +24,7 @@
 
 *Vad fungerade bra? Vad var svårt? Hur delade ni upp arbetet? Hur använde ni Git tillsammans (branches, merge, pull requests)?*
 
-> Samarbetet fungerade bra och vi hjälpte varandra när någon fastnade. Vi delade upp arbete mellan oss och pratade med varandra om vad som behöbde göras. Vi kommunicerade med varandra både på Discord och under lektionstid. Samar gjorde Player, Yuk gjorde Zombie/Monster både basklassern och subklasserna och Ali gjorde battle. Vi hjälptes åt Main()/program.cs delen.
+> Samarbetet fungerade bra och vi hjälpte varandra när någon fastnade. Vi delade upp arbete mellan oss och pratade med varandra om vad som behövdes göras. Vi kommunicerade med varandra både på Discord och under lektionstid. Samar gjorde Player, Yuk gjorde Zombie/Monster, både basklassern och subklasserna och Ali gjorde Battle. Vi hjälptes åt Main()/program.cs delen.
 
 ---
 
@@ -32,7 +32,7 @@
 
 *Tänk på din lösning, din struktur, eller hur ni jobbade. Vad skulle du ändra?*
 
-> Om vi fick göra om projekete hade vi börjat med att planera bättre. Vi hade kunnat gör ett UML-diagram och läsa genom alla krav noggrannare innan vi började koda. Vi hade även kunnat ha ett tydligare system göt Git, till exempel bestämma vad som skulle pushas och när. Då hade vi kunnat undvika onödiga pushningar och konflikter.
+> Om vi fick göra om projekete hade vi börjat med att planera bättre. Vi hade kunnat gör ett UML-diagram och läsa genom alla krav noggrannare innan vi började koda. Vi hade även kunnat ha ett tydligare system för Git, till exempel bestämma vad som skulle pushas och när. Då hade vi kunnat undvika onödiga pushningar och konflikter.
 
 ---
 
@@ -40,7 +40,7 @@
 
 *Om ni använde arv: varför valde ni den strukturen? Vilken `List<T>` (eller annan datastruktur) använde ni, och varför just den?*
 
-> Vi använde arvs för att kunna skapa olika typer av Zombies med gemensamma egenskaper. Walker, Runner och Mutant ärver från Zombie, vilket gör att vi slipper skriva samma kod flera gånger. Vi använder List<Zombie> för att samla alla monster och sedan välja ett slumpmässigt monster.
+> Vi använde arv för att kunna skapa olika typer av Zombies med gemensamma egenskaper. Walker, Runner och Mutant ärver från Zombie, vilket gör att vi slipper skriva samma kod flera gånger. Vi använder List<Zombie> för att samla alla monster och sedan välja ett slumpmässigt monster.
 
 ---
 
