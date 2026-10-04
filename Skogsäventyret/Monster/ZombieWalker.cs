@@ -10,7 +10,7 @@ namespace Tågäventyret
     public class Walker : Zombie
     {
         public Walker()
-             : base("Infected Passenger", hp: 50, attack: 5, forsvar: 7, xpBeloning: 60)
+             : base("Infected Passenger", hp: 50, attack: 3, forsvar: 3, xpBeloning: 60)
         {
         }
     }

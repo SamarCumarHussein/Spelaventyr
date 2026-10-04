@@ -5,6 +5,8 @@ public class Battle
     // Striden fortsätter tills spelaren eller monstret dör
     public void StartBattle(Player player, Zombie zombie)
     {
+        // Anpassar zombieens HP efter spelarens level
+        zombie.AnpassaTillLevel(player.Level);
         Console.WriteLine($"Du möter {zombie.Name}!");
 
         while (player.Hp > 0 && zombie.Hp > 0)
@@ -114,6 +116,7 @@ public class Battle
         Console.WriteLine(
             $"Du springer iväg men {zombie.Name} gör {skada} skada."
         );
+
 
         // Avsluta striden och gå tillbaka till startsidan
         return;

@@ -37,6 +37,15 @@ public class Zombie
 
         return false;
     }
+    public void AnpassaTillLevel(int level)
+    {
+        if (level >= 4)
+        {
+            Hp += 50;
+            Attack += 5;
+        }
+    }
+
 
     // Zombie attackerar spelaren.
     public void AttackPlayer(Player player)

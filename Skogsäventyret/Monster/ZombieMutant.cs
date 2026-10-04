@@ -4,7 +4,7 @@
     {
         public Mutant()
 
-            : base("Zombie Captain", hp: 25, attack: 2,forsvar:2, xpBeloning: 50)
+            : base("Zombie Captain", hp: 25, attack:2,forsvar:2, xpBeloning: 50)
         {
         }
     }
