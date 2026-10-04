@@ -42,7 +42,7 @@ public class Zombie
         if (level >= 4)
         {
             Hp += 50;
-            Attack += 5;
+            Attack += 7;
         }
     }
 
